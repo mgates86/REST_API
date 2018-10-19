@@ -1,0 +1,24 @@
+$password = "XXXXXX"
+#$uri = "http://XXXXX:5080/api/folders"
+$Type = "application/json"
+
+
+
+$Header =  @{"Authorization" = "Basic "+[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("APIUSER:"+$password))}
+$folders = Invoke-RestMethod -Headers $Header -Method GET -ContentType application/json -Uri http://XXXXXX:5080/api/folders/Y2Q3ZDhmNzM4OTI5MWVlY2MwZDdiNGVlNjQxZjM2ZWYxOGNkZGMzZDc4YjQ0ODEyMGNjZTBmNWM3Mzc3NzkzZA/children
+
+
+
+
+
+$Header =  @{"Authorization" = "Basic "+[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($user+":"+$password))}
+$connections = Invoke-RestMethod -Headers $Header -Method GET -ContentType application/json -Uri http://XXXXXXX:5080/api/connections
+
+
+
+
+$user = 
+
+
+$Header =  @{"Authorization" = "Basic "+[System.Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($user+":"+$password))}
+$connections = Invoke-RestMethod -Headers $Header -Method GET -ContentType application/json -Uri http://XXXXXXXX:5080/api/connections/0IHfPHm_S4O3AqP8OTo4gA
